@@ -223,7 +223,7 @@ length' xs = (count xs) - 1
     length' list 
     1.length' xs = (count xs) - 1　より　countの値を算出
     2.countの再帰
-        count (x:xs) = (+1) count(xs)
+        count (x:xs) = 1 + count(xs)
         count [1,2,3] = 1 + count`[2,3]`(1 + count`[3]`(1 + count`[]`("base case!!")))  
     3.count [1,2,3] = 3 より　length' [1,2,3] = 3 - 1
 -}
