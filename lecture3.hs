@@ -227,3 +227,11 @@ length' xs = (count xs) - 1
         count [1,2,3] = 1 + count`[2,3]`(1 + count`[3]`(1 + count`[]`("base case!!")))  
     3.count [1,2,3] = 3 より　length' [1,2,3] = 3 - 1
 -}
+
+mod_xs :: a -> ([b] -> [a]) 
+mod_xs a = \ls -> map(\x -> a) $ ls
+
+mkLs :: Int -> [Int]
+mkLs 0 = []
+mkLs 1 = [1]
+mkLs x = [1 .. x]
